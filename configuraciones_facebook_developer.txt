@@ -1,0 +1,37 @@
+1. Crear un nuevo aplicatrivo en FB developer. que sea de tipo Messenger
+2. Asignar el aplicativo a una pagina de FB
+3. Tener el proyecto en una URL publica con certificado
+4. Agregar un webhook, donde se configurará la URL del proyecto
+5. En el webhook se debe asigar el verifyToken
+
+
+AGREGAR MENU AL CHAT
+1. Ingresar a https://developers.facebook.com/tools/explorer
+2. Seleccionar la aplicacion y la pagina a la cual esta enlazada
+3. Cambiar la URL a metodo POST y el complemento de la url debe ser "me/messenger_profile"
+4. Generar JSON del Menú (https://developers.facebook.com/tools/explorer/996924593983678/?session_id=2403797246528838)
+        {
+            "persistent_menu":[
+                {
+                "locale":"default",
+                "composer_input_disabled":false,
+                "call_to_actions":[
+                    {
+                    "title":"Llena una encuesta",
+                    "type":"postback",
+                    "payload":"encuestas"
+                    },
+                    {
+                    "title":"Encuetra sucursales",
+                    "type":"postback",
+                    "payload":"sucursales"
+                    }
+                ]
+                }
+            ]
+        }
+
+
+CONFIGURARA IA EN wit.ai 
+1. Crear una nueva app
+2. agre gar nua nueva entidad y selecciones free-text and keywords
